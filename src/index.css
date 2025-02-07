@@ -26,3 +26,7 @@
     font-family: "BrotherSignature";
     src: local("BrotherSignature") ,url("./fonts/BrotherSignature.otf") format("opentype");
 }
+
+body {
+    background-color: #181818;
+}
