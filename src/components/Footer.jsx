@@ -42,7 +42,7 @@ const socialLinks = [
 
 export default function Footer() {
     return (
-        <div className="flex flex-col md:gap-y-12 h-fit w-full">
+        <div className="flex flex-col md:gap-y-12 h-fit w-full mt-24 mb-8">
             {/* Signature */}
             <div className="w-full flex flex-col md:gap-y-10">
                 {/* Heading */}
@@ -53,6 +53,7 @@ export default function Footer() {
                             leadingText={"Website brought to"}
                             spanText={"Life"}
                             trailingText={"by"}
+                            className={"text-center"}
                         />
                     </div>
                     <Separator className="col-span-4" />
