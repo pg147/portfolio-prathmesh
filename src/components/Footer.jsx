@@ -66,16 +66,16 @@ export default function Footer() {
             <div className="w-full flex flex-col gap-y-4">
                 {/* Copyright */}
                 <div className="w-full grid grid-cols-12 items-center gap-x-1">
-                    <h1 className="text-lg col-span-4 font-regular text-textSecondary">&copy; 2025 | Prathmesh Gaidhane | All rights reserved</h1>
-                    <Separator className="col-span-8" />
+                    <h1 className="text-lg xl:col-span-6 2xl:col-span-4 font-regular text-textSecondary">&copy; 2025 | Prathmesh Gaidhane | All rights reserved</h1>
+                    <Separator className="xl:col-span-6 2xl:col-span-8" />
                 </div>
 
                 {/* Footer Links */}
                 <div className="flex w-full items-center justify-between">
                     {/* Links & Buttons */}
-                    <div className="flex items-center md:gap-x-14">
+                    <div className="flex items-center xl:gap-x-10 2xl:gap-x-14">
                         {/* Links */}
-                        <div className="flex items-center md:gap-x-14">
+                        <div className="flex items-center xl:gap-x-10 2xl:gap-x-14">
                             {footerLinks.map((link, index) => (
                                 <div key={index} className="md:h-12 w-fit py-2.5">
                                     <h1 className="text-lg text-links font-regular">{link.label}</h1>
