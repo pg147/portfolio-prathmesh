@@ -20,6 +20,7 @@ export default {
         headingGradientPrimary: "#FFFFFF",
         headingGradientSecondary: "#A1A1A1",
         links: "#808080",
+        subheading: "#808080",
         textSecondary: "#F5F5F5",
         separatorGradient: "#737373",
         tile: "#242424",
