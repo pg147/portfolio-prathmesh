@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Techno-Nue-Regular";
+    src: local("Techno-Nue-Regular"), url("./fonts/TechnoNue-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Techno-Nue-Medium";
+    src: local("Techno-Nue-Medium"), url("./fonts/TechnoNue-Medium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Techno-Nue-Semibold";
+    src: local("Techno-Nue-Semibold"), url("./fonts/TechnoNue-SemiBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Techno-Nue-Bold";
+    src: local("Techno-Nue-Bold"), url("./fonts/TechnoNue-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "BrotherSignature";
+    src: local("BrotherSignature") ,url("./fonts/BrotherSignature.otf") format("opentype");
+}
