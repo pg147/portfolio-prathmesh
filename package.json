@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@hugeicons/react": "^1.0.3",
+    "hugeicons-react": "^0.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
