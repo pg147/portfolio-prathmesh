@@ -3,7 +3,7 @@ import GradientHeading from "./GradientHeading";
 
 export default function QueryForm() {
     return (
-        <div className="w-full flex justify-between">
+        <div className="w-full flex justify-between mt-28">
             <div className="flex flex-col gap-y-10 w-fit">
                 <div className="flex flex-col gap-y-1 w-fit">
                     <GradientHeading
@@ -29,7 +29,7 @@ export default function QueryForm() {
                 </div>
             </div>
 
-            <div className="w-full md:max-w-[600px]">
+            <div className="w-full xl:max-w-[550px] 2xl:max-w-[600px]">
                 <Form />
             </div>
         </div>
