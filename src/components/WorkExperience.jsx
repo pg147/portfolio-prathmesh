@@ -23,7 +23,7 @@ const experiences = [
 
 export default function WorkExperience() {
   return (
-    <div className="w-full flex flex-col gap-y-7 py-24 bg-gradient-to-l from-transparent via-primary/5 to-transparent">
+    <div className="w-full mt-20 flex flex-col gap-y-7 py-24 bg-gradient-to-l from-transparent via-primary/5 to-transparent">
       {/* Heading */}
       <div className="flex items-center gap-x-3">
         <GradientHeading
