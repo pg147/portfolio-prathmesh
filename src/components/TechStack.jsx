@@ -71,11 +71,11 @@ const tech = [
 
 export default function TechStack() {
     return (
-        <div className="w-full grid grid-cols-3 gap-y-14 items-start justify-between">
-            <div className="flex items-center gap-x-5">
+        <div className="px-4 md:px-0 w-full mt-20 md:mx-auto flex flex-col md:grid md:grid-cols-3 gap-x-20 gap-y-14 items-start justify-between xl:max-w-[1050px] 2xl:max-w-[1400px]">
+            <div className="flex items-center gap-x-5 mx-auto md:mx-0">
                 <GradientHeading
                     leadingText={"Tech Stack"}
-                    className={"text-left"}
+                    className={"text-left xl:text-2xl 2xl:text-3xl font-medium"}
                 />
                 <h1 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">{"{ }"}</h1>
             </div>

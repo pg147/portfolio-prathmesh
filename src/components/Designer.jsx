@@ -34,22 +34,22 @@ const designs = [
 
 export default function Designer() {
     return (
-        <div className="w-full flex flex-col gap-y-7 mt-16">
+        <div className="w-full xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto flex flex-col gap-y-7 mt-16">
             {/* Heading */}
-            <div className="flex items-center gap-x-3">
+            <div className="flex items-center gap-x-3 mx-auto md:mx-0">
                 <GradientHeading
                     leadingText={"Passion / Hobby Designer"}
-                    className={"text-left"}
+                    className={"text-left text-xl xl:text-2xl 2xl:text-3xl font-medium"}
                 />
-                <div className="bg-tile border-[1.5px] rounded-2xl border-stroke px-4 py-2">
+                <div className="bg-tile border-[1.5px] rounded-2xl border-stroke px-3 py-1 xl:px-3.5 xl:py-1.5 2xl:px-4 2xl:py-2">
                     <h1 className="font-medium text-lg text-textSecondary">.fig</h1>
                 </div>
             </div>
 
             {/* Content */}
-            <div className="w-full h-fit flex flex-row items-center gap-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth flex-nowrap">
+            <div className="px-3 md:px-0 w-full h-fit flex flex-row items-center gap-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth flex-nowrap">
                 {designs.map((design, index) => (
-                    <div key={index} className="snap-start min-w-[350px]">
+                    <div key={index} className="md:snap-start min-w-[350px]">
                         <ProjectCards
                             title={design.title}
                             brief={design.brief}

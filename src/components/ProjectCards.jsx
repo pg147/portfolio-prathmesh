@@ -8,7 +8,7 @@ export default function ProjectCards({ title, type, image, brief, hostlink, proj
         <h1 className="font-medium text-lg text-textSecondary">{title}</h1>
       </div>
 
-      <img src={image} alt={title + "_cover"} className="h-[225px] w-[350px] rounded-xl object-cover" />
+      <img src={image} alt={title + "_cover"} className="h-[200px] md:h-[225px] w-[350px] rounded-xl object-cover" />
 
       <div className="flex items-start justify-between w-full">
         <p className="text-subheading font-medium w-3/4">- {brief}</p>

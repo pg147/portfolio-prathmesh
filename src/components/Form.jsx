@@ -32,7 +32,7 @@ export default function Form() {
 
     return (
         <form onSubmit={handleFormSubmit}>
-            <div className="p-6 w-full rounded-3xl bg-form flex flex-col gap-y-5">
+            <div className="p-4 md:p-6 w-full rounded-3xl bg-form flex flex-col gap-y-5">
                 <div className="w-full flex flex-col gap-y-7">
                     {/* Name Input */}
                     <div className="w-full flex flex-col gap-y-3">

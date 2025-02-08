@@ -11,7 +11,8 @@ export default {
         medium: "Techno-Nue-Medium",
         semibold: "Techno-Nue-Semibold",
         bold: "Techno-Nue-Bold",
-        signature: "BrotherSignature"
+        signature: "BrotherSignature",
+        code: ["Source Code Pro", "sans-serif"]
       },
       colors: {
         body: "#181818",
@@ -23,6 +24,11 @@ export default {
         subheading: "#808080",
         textSecondary: "#F5F5F5",
         separatorGradient: "#737373",
+        codeVariable: "#04D0F7",
+        codeKeyword: "#B43BFF",
+        codeObject: "#FF9704",
+        codeTag: "#FF4F04",
+        codeString: "#689F63",
         tile: "#242424",
         stroke: "#393939",
         card: "#232323",

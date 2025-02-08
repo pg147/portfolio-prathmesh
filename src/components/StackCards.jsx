@@ -1,11 +1,12 @@
+import Separator from "./Separator";
 import SmallSeparator from "./SmallSeparator";
 
 export default function StackCards({ title, items = [] }) {
     return (
-        <div className="w-full flex flex-col gap-y-4 max-w-[375px]">
-            <h1 className="text-2xl text-textSecondary font-medium">{title}</h1>
-            <SmallSeparator />
-            <div className="flex gap-x-9 w-full font-regular">
+        <div className="w-full flex flex-col gap-y-4 md:max-w-[375px]">
+            <h1 className="text-2xl text-textSecondary font-medium text-center md:text-left">{title}</h1>
+            {window.innerWidth > 768 ? <SmallSeparator /> : <Separator />}
+            <div className="flex gap-x-9 w-fit mx-auto md:mx-0 md:w-full font-regular">
                 {
                     items.map((item, index) => (
                         <div key={index} className="flex items-center gap-x-2.5">

@@ -23,20 +23,20 @@ const experiences = [
 
 export default function WorkExperience() {
   return (
-    <div className="w-full mt-20 flex flex-col gap-y-7 pt-16 pb-24 bg-gradient-to-l from-transparent via-primary/5 to-transparent">
+    <div className="w-full xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto mt-20 flex flex-col gap-y-7 pt-16 pb-24 bg-gradient-to-l from-transparent via-primary/5 to-transparent">
       {/* Heading */}
-      <div className="flex items-center gap-x-3">
+      <div className="flex items-center gap-x-3 mx-auto md:mx-0">
         <GradientHeading
           leadingText={"Work Experience"}
-          className={"text-left"}
+          className={"text-left text-xl xl:text-2xl 2xl:text-3xl font-medium"}
         />
-        <div className="bg-tile border-[1.5px] rounded-2xl border-stroke px-4 py-2">
+        <div className="bg-tile border-[1.5px] rounded-2xl border-stroke px-3 py-1 xl:px-3.5 xl:py-1.5 2xl:px-4 2xl:py-2">
           <h1 className="font-medium text-lg text-textSecondary">.org</h1>
         </div>
       </div>
 
       {/* Experiences */}
-      <div className="w-full flex items-center justify-between">
+      <div className="w-fit md:w-full flex flex-col gap-y-12 mx-auto md:mx-0 md:flex-row justify-between">
         {
           experiences.map((item, index) => (
             <InfoCards
