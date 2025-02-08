@@ -73,7 +73,7 @@ export default function Form() {
                     {/* Checkbox Selection */}
                     <div className="w-full flex flex-col gap-y-3">
                         <label className="font-regular text-textSecondary text-lg">Related to</label>
-                        <div className="flex justify-between w-full">
+                        <div className="grid grid-cols-2 gap-y-2 md:flex justify-between w-full">
                             {checkboxOptions.map((option, index) => (
                                 <div key={index} className="w-fit flex items-center gap-x-2">
                                     <label className="relative flex items-center cursor-pointer">
@@ -120,7 +120,7 @@ export default function Form() {
                     </div>
                 </div>
 
-                <button type="submit" className="bg-primary w-full md:h-14 font-regular text-white rounded-xl">
+                <button type="submit" className="bg-primary w-full h-12 md:h-14 font-regular text-white rounded-xl">
                     Submit
                 </button>
             </div>
