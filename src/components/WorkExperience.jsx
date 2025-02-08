@@ -23,7 +23,7 @@ const experiences = [
 
 export default function WorkExperience() {
   return (
-    <div className="w-full xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto mt-20 flex flex-col gap-y-7 pt-16 pb-24 bg-gradient-to-l from-transparent via-primary/5 to-transparent">
+    <div className="px-5 md:px-0 w-full xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto mt-12 md:mt-20 flex flex-col gap-y-7 pt-12 md:pt-16 pb-14 md:pb-24 bg-gradient-to-l from-transparent via-primary/5 to-transparent">
       {/* Heading */}
       <div className="flex items-center gap-x-3 mx-auto md:mx-0">
         <GradientHeading
@@ -36,7 +36,7 @@ export default function WorkExperience() {
       </div>
 
       {/* Experiences */}
-      <div className="w-fit md:w-full flex flex-col gap-y-12 mx-auto md:mx-0 md:flex-row justify-between">
+      <div className="w-full flex flex-col gap-y-16 md:flex-row justify-between">
         {
           experiences.map((item, index) => (
             <InfoCards

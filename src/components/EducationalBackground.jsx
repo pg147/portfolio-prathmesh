@@ -24,7 +24,7 @@ const education = [
 
 export default function EducationalBackground() {
     return (
-        <div className="w-full xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto flex flex-col gap-y-7 mt-16">
+        <div className="px-5 md:px-0 w-full xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto flex flex-col gap-y-7 mt-16">
             {/* Heading */}
             <div className="flex items-center gap-x-3 mx-auto md:mx-0">
                 <GradientHeading
@@ -37,7 +37,7 @@ export default function EducationalBackground() {
             </div>
 
             {/* Experiences */}
-            <div className="w-fit md:w-full flex flex-col gap-y-12 mx-auto md:mx-0 md:flex-row justify-between">
+            <div className="w-fit md:w-full flex flex-col gap-y-16 mx-auto md:mx-0 md:flex-row justify-between">
                 {
                     education.map((item, index) => (
                         <InfoCards

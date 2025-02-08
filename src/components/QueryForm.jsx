@@ -1,9 +1,11 @@
 import Form from "./Form";
 import GradientHeading from "./GradientHeading";
+import Separator from "./Separator";
 
 export default function QueryForm() {
     return (
-        <div className="w-full px-5 md:px-0 xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto flex flex-col gap-y-7 md:gap-y-0 md:flex-row justify-between mt-28">
+        <div className="w-full px-5 md:px-0 xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto flex flex-col gap-y-7 md:gap-y-0 md:flex-row justify-between mt-12 md:mt-28">
+            {window.innerWidth < 768 && <Separator className={"mb-7"} />}
             <div className="flex flex-col md:gap-y-10 w-fit mx-auto md:mx-0">
                 <div className="flex flex-col gap-y-1 w-fit">
                     <GradientHeading

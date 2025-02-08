@@ -34,7 +34,7 @@ const designs = [
 
 export default function Designer() {
     return (
-        <div className="w-full xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto flex flex-col gap-y-7 mt-16">
+        <div className="px-5 md:px-0 w-full xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto flex flex-col gap-y-7 mt-12 md:mt-16">
             {/* Heading */}
             <div className="flex items-center gap-x-3 mx-auto md:mx-0">
                 <GradientHeading
@@ -47,7 +47,7 @@ export default function Designer() {
             </div>
 
             {/* Content */}
-            <div className="px-3 md:px-0 w-full h-fit flex flex-row items-center gap-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth flex-nowrap">
+            <div className="w-full h-fit flex flex-row items-center gap-x-6 overflow-x-auto snap-x snap-mandatory scrollbar-hide scroll-smooth flex-nowrap">
                 {designs.map((design, index) => (
                     <div key={index} className="md:snap-start min-w-[350px]">
                         <ProjectCards
