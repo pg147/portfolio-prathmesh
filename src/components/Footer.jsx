@@ -41,10 +41,19 @@ const socialLinks = [
 ]
 
 export default function Footer() {
+    const handleDownload = () => {
+        const link = document.createElement("a");
+        link.href = "/Prathmesh-Gaidhane-Resume.pdf"; // Path from public folder
+        link.download = "Prathmesh-Gaidhane-Resume.pdf"; // File name when downloaded
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    };
+
     return (
         <div className="xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto flex flex-col gap-y-9 md:gap-y-12 h-fit w-full mt-24 mb-8">
             <Separator className={"md:hidden"} />
-            
+
             {/* Signature */}
             <div className="w-full flex flex-col gap-y-6 md:gap-y-10">
                 {/* Heading */}
@@ -86,7 +95,7 @@ export default function Footer() {
                         </div>
 
                         {/* CV Button */}
-                        <button className="font-regular text-lg md:h-12 w-full md:w-fit px-6 py-2.5 bg-gradient-to-t text-textSecondary from-primary/60 via-body to-body">Download CV</button>
+                        <button onClick={handleDownload} className="font-regular text-lg md:h-12 w-full md:w-fit px-6 py-2.5 bg-gradient-to-t text-textSecondary from-primary/60 via-body to-body">Download CV</button>
                     </div>
 
                     {/* Social Links */}
