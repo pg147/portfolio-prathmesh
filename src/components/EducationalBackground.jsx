@@ -37,7 +37,7 @@ export default function EducationalBackground() {
             </div>
 
             {/* Experiences */}
-            <div className="w-full flex items-center justify-between">
+            <div className="w-full flex items-start justify-between">
                 {
                     education.map((item, index) => (
                         <InfoCards

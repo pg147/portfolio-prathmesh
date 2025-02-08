@@ -56,6 +56,7 @@ export default function Designer() {
                             image={design.image}
                             projectlink={design.projectlink}
                             hostlink={design.hostlink}
+                            type={"design"}
                         />
                     </div>
                 ))}
