@@ -20,9 +20,9 @@ const projects = [
 
 export default function RecentWork() {
     return (
-        <div className="w-full xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto mt-20 flex flex-row justify-between gap-y-7 pt-16 pb-24 bg-gradient-to-l from-transparent via-primary/5 to-transparent">
+        <div className="w-full xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto mt-20 flex flex-col md:flex-row justify-between gap-y-7 pt-16 pb-24 bg-gradient-to-l from-transparent via-primary/5 to-transparent">
             <div className="h-fit flex flex-col gap-y-12">
-                <div className="flex items-center gap-x-5">
+                <div className="flex items-center gap-x-5 mx-auto md:mx-0">
                     <GradientHeading
                         leadingText={"Recent Work"}
                         className={"text-left xl:text-2xl 2xl:text-3xl font-medium"}
@@ -30,7 +30,7 @@ export default function RecentWork() {
                     <h1 className="text-3xl font-semibold bg-clip-text text-transparent bg-gradient-to-b from-primary to-secondary">{"</>"}</h1>
                 </div>
 
-                <div className="font-medium flex flex-col gap-y-2.5 xl:w-[95%] 2xl:w-fit text-subheading xl:text-lg 2xl:text-2xl">
+                <div className="hidden md:flex font-medium mx-auto md:mx-0 flex-col gap-y-2.5 xl:w-[95%] 2xl:w-fit text-subheading xl:text-lg 2xl:text-2xl">
                     <div className="flex items-center gap-x-3.5">
                         <h1>Follow</h1>
                         <div className="bg-tile flex gap-x-2.5 items-center border-[1.5px] size-fit rounded-2xl border-stroke px-4 py-1.5">
@@ -43,7 +43,7 @@ export default function RecentWork() {
                 </div>
             </div>
 
-            <div className="flex items-center xl:gap-x-6 2xl:gap-x-14">
+            <div className="flex flex-col gap-y-8 md:flex-row items-center xl:gap-x-6 2xl:gap-x-14">
                 {projects.map((design, index) => (
                     <div key={index} className="snap-start min-w-[350px]">
                         <ProjectCards
@@ -56,6 +56,18 @@ export default function RecentWork() {
                         />
                     </div>
                 ))}
+            </div>
+
+            <div className="md:hidden mt-6 flex font-medium mx-auto md:mx-0 flex-col gap-y-2.5 xl:w-[95%] 2xl:w-fit text-subheading xl:text-lg 2xl:text-2xl">
+                <div className="flex items-center gap-x-3.5">
+                    <h1>Follow</h1>
+                    <div className="bg-tile flex gap-x-2.5 items-center border-[1.5px] size-fit rounded-2xl border-stroke px-4 py-1.5">
+                        <img src="/github.svg" alt="github" />
+                        <p className="text-white">/ pg147</p>
+                    </div>
+                    <p>to view</p>
+                </div>
+                <p>latest projects and related updates.</p>
             </div>
         </div>
     )
