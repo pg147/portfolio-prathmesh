@@ -1,12 +1,17 @@
 import FunSnippets from './FunSnippets'
 import HeroStrip from './HeroStrip'
 import GradientHeading from './GradientHeading';
+import { Menu01Icon } from 'hugeicons-react';
 
 export default function HeroSection() {
   return (
-    <div className='relative h-full flex justify-between w-full overflow-hidden'>
-      <div className='w-fit xl:p-28 2xl:p-36 flex flex-col gap-y-16 mx-auto'>
-        <div className='mt-12'>
+    <div className='relative h-full w-full overflow-hidden'>
+      <div className='w-full h-fit flex items-center justify-between px-6 py-4'>
+        <Menu01Icon className='text-primary size-6' />
+        <button className="font-regular text-sm md:h-12 w-fit px-6 py-2.5 bg-gradient-to-t text-textSecondary from-primary/60 via-body to-body">Download CV</button>
+      </div>
+      <div className='w-fit xl:p-28 2xl:p-36 flex flex-col gap-y-16 mx-auto md:mx-0'>
+        <div className='mt-6 md:mt-0'>
           <GradientHeading
             leadingText={"I AM A"}
             spanText={"FULL STACK"}
@@ -17,6 +22,15 @@ export default function HeroSection() {
             trailingText={"</>"}
             className={"font-semibold text-center md:text-left text-3xl md:text-6xl"}
           />
+
+          <div className='flex w-fit items-center gap-x-3 mx-auto mt-4 md:mx-0 text-sm'>
+            <div className='bg-tile border-[1.5px] px-3 py-2 border-stroke rounded-xl'>
+              <h1 className='text-[#C2BFBF] font-code'>version: <span className='text-textSecondary font-[700]'>7.7.7</span></h1>
+            </div>
+            <div className='bg-tile border-[1.5px] px-3 py-2 border-stroke rounded-xl'>
+              <h1 className='text-[#C2BFBF] font-code'>release: <span className='text-textSecondary font-[700]'>11/07/03</span></h1>
+            </div>
+          </div>
         </div>
         <FunSnippets />
       </div>
