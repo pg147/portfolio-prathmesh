@@ -8,7 +8,7 @@ export default function HeroStrip() {
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        const handleResize = () => setIsMobile(window.innerWidth < 768);
+        const handleResize = () => setIsMobile(window.innerWidth < 1024);
         handleResize();
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
@@ -16,7 +16,7 @@ export default function HeroStrip() {
 
     return (
         isMobile ? (
-            <div className="z-[11] absolute bottom-0 px-8 md:hidden flex items-center overflow-hidden h-20 w-full bg-gradient-to-r from-black via-secondary to-black" >
+            <div className="z-[11] absolute bottom-0 px-8 flex items-center overflow-hidden h-20 w-full bg-gradient-to-r from-black via-secondary to-black" >
                 <motion.div
                     className="flex gap-x-12 whitespace-nowrap"
                     animate={{ x: ["0%", "-100%"] }} // Moves from right to left

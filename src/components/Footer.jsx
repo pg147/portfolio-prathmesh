@@ -76,17 +76,17 @@ export default function Footer() {
 
             <div className="w-full flex flex-col gap-y-4">
                 {/* Copyright */}
-                <div className="w-full md:grid md:grid-cols-12 items-center gap-x-1">
-                    <h1 className="text-sm text-center md:text-left md:text-lg xl:col-span-6 2xl:col-span-4 font-regular text-textSecondary">&copy; 2025 | Prathmesh Gaidhane | All rights reserved</h1>
-                    <Separator className="hidden md:block xl:col-span-6 2xl:col-span-8" />
+                <div className="w-full lg:grid lg:grid-cols-12 items-center gap-x-1">
+                    <h1 className="text-sm text-center lg:text-left md:text-lg xl:col-span-6 2xl:col-span-4 font-regular text-textSecondary">&copy; 2025 | Prathmesh Gaidhane | All rights reserved</h1>
+                    <Separator className="hidden lg:block xl:col-span-6 2xl:col-span-8" />
                 </div>
 
                 {/* Footer Links */}
-                <div className="flex flex-col gap-y-6 md:flex-row w-full items-center justify-between">
+                <div className="flex flex-col gap-y-6 lg:flex-row w-full items-center justify-between">
                     {/* Links & Buttons */}
-                    <div className="md:flex items-center xl:gap-x-10 2xl:gap-x-14 px-6 md:px-0">
+                    <div className="lg:flex items-center xl:gap-x-10 2xl:gap-x-14 px-6 md:px-0">
                         {/* Links */}
-                        <div className="grid grid-cols-4 md:flex items-center xl:gap-x-10 2xl:gap-x-14">
+                        <div className="grid grid-cols-4 md:grid-cols-5 lg:flex items-center md:gap-x-4 xl:gap-x-10 2xl:gap-x-14">
                             {footerLinks.map((link, index) => (
                                 <div key={index} className="md:h-12 w-fit py-2.5">
                                     <h1 className="text-base md:text-lg text-links font-regular">{link.label}</h1>
@@ -95,7 +95,7 @@ export default function Footer() {
                         </div>
 
                         {/* CV Button */}
-                        <button onClick={handleDownload} className="font-regular text-lg md:h-12 w-full md:w-fit px-6 py-2.5 bg-gradient-to-t text-textSecondary from-primary/60 via-body to-body">Download CV</button>
+                        <button onClick={handleDownload} className="font-regular text-lg md:h-12 w-full lg:w-fit px-6 py-2.5 bg-gradient-to-t text-textSecondary from-primary/60 via-body to-body">Download CV</button>
                     </div>
 
                     {/* Social Links */}
