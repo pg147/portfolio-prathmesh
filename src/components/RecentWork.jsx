@@ -4,17 +4,17 @@ import ProjectCards from "./ProjectCards";
 const projects = [
     {
         title: "Chatty-io",
-        image: "/chatty-io.png",
+        image: "/projects/chatty-io.png",
         brief: "A real-time chat web application.",
-        projectlink: "#",
-        hostlink: "#"
+        projectlink: "https://github.com/pg147/chatty-io",
+        hostlink: "N/A"
     },
     {
         title: "BeatSync",
-        image: "/beat-sync.png",
+        image: "/projects/beat-sync.png",
         brief: "Spotify inspired music streaming web app.",
-        projectlink: "#",
-        hostlink: "#"
+        projectlink: "https://github.com/pg147/beat-sync",
+        hostlink: "https://beatsync.fun"
     }
 ]
 

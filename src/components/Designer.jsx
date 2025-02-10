@@ -4,31 +4,31 @@ import ProjectCards from "./ProjectCards";
 const designs = [
     {
         title: "House of Travellers",
-        image: "/house-of-travellers.png",
+        image: "/designs/house-of-travellers.png",
         brief: "D2C Backpacker hostel brand for travellers",
-        projectlink: "#",
-        hostlink: "#"
+        projectlink: "https://www.figma.com/proto/pz1AbORzoHKkcvW4hnOmkQ/House-of-Travellers?node-id=0-1&t=XyTxePd4zn1oNZKr-1",
+        hostlink: "https://www.houseoftravellers.com/"
     },
     {
         title: "ACTMIT Solar",
-        image: "/actmit-solar.png",
+        image: "/designs/actmit-solar.png",
         brief: "German Solar e-commerce marketplace.",
-        projectlink: "#",
-        hostlink: "#"
+        projectlink: "https://www.figma.com/proto/ac9ep0pePM6ioSZjk8auUd/ACTMIT-Solar?node-id=0-1&t=JbtUaMgiAvWniLpM-1",
+        hostlink: "https://actmitsolar.de"
     },
     {
         title: "Blemense.tech",
-        image: "/blemense-tech.png",
+        image: "/designs/blemense-tech.png",
         brief: "Software Services based agency website.",
-        projectlink: "#",
-        hostlink: "#"
+        projectlink: "https://www.figma.com/proto/QRzLlNovYxOVwjsXy657fr/Blemense.tech---PUBLIC-ACCESS?node-id=0-1&t=tvlgykzLxbCBzXVR-1",
+        hostlink: "https://blemense.tech"
     },
     {
         title: "Yuvaa Clothing",
-        image: "/yuvaa.png",
+        image: "/designs/yuvaa.png",
         brief: "Merchandised Clothing e-commerce store.",
-        projectlink: "#",
-        hostlink: "#"
+        projectlink: "https://www.figma.com/proto/d012cUSESW7vmka7NMRChv/Yuvaa-Project?node-id=144-38&t=S6wgfdEYydKN2D89-1",
+        hostlink: "N/A"
     },
 ]
 
