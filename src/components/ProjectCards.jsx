@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Globe02Icon } from "hugeicons-react";
-import UnavailableDialog from "./UnavailableDialog";
+import Dialog from "./Dialog";
 
 export default function ProjectCards({ title, type, image, brief, hostlink, projectlink }) {
   const [isDialogOpen, setDialogOpen] = useState(false);
@@ -49,7 +49,7 @@ export default function ProjectCards({ title, type, image, brief, hostlink, proj
       </div>
 
       {/* Unavailable Dialog */}
-      <UnavailableDialog isOpen={isDialogOpen} onClose={() => setDialogOpen(false)} />
+      <Dialog isOpen={isDialogOpen} title={"Website unavailable"} content={"Sorry, this website is currently unavailable. Please check again later"} onClose={() => setDialogOpen(false)} />
     </div>
   );
 }
