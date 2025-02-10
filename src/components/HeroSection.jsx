@@ -3,6 +3,7 @@ import HeroStrip from './HeroStrip'
 import GradientHeading from './GradientHeading';
 import { Menu01Icon } from 'hugeicons-react';
 import { useEffect, useState } from 'react';
+import SideMenu from './SideMenu';
 
 // Nav Links
 const navLinks = [
@@ -30,15 +31,7 @@ const navLinks = [
 
 export default function HeroSection() {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleDownload = () => {
     const link = document.createElement("a");
@@ -62,14 +55,36 @@ export default function HeroSection() {
     }
   }
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.body.classList.remove("overflow-hidden");
+    }
+    return () => document.body.classList.remove("overflow-hidden");
+  }, [menuOpen]);
+
   return (
     <div className='relative h-full w-full overflow-hidden'>
       {/* Mobile Menu */}
       {isMobile && <div className='w-full h-fit flex items-center justify-between px-6 py-4'>
-        <Menu01Icon className='text-primary size-6' />
+        <button onClick={() => setMenuOpen(true)}>
+          <Menu01Icon className='text-primary size-6' />
+        </button>
         <button onClick={handleDownload} className="font-regular text-sm md:h-12 w-fit px-6 py-2.5 bg-gradient-to-t text-textSecondary from-primary/60 via-body to-body">Download CV</button>
       </div>}
 
+      {/* Side Menu */}
+      {isMobile && menuOpen && <SideMenu isOpen={menuOpen} onClose={() => setMenuOpen(false)} navLinks={navLinks} handleNavClick={handleNavClick} />}
 
       {/* Web Menu */}
       {!isMobile && <div className="mt-12 w-fit xl:px-28 2xl:px-36 md:flex md:mx-auto lg:mx-0 items-center md:gap-x-10 2xl:gap-x-14">

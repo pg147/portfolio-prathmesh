@@ -33,15 +33,15 @@ const footerLinks = [
 const socialLinks = [
     {
         icon: InstagramIcon,
-        href: ''
+        href: 'https://www.instagram.com/pg_147/'
     },
     {
         icon: Linkedin01Icon,
-        href: ''
+        href: 'https://www.linkedin.com/in/prathmesh-gaidhane-9019b022a/'
     },
     {
         icon: NewTwitterRectangleIcon,
-        href: ''
+        href: '#'
     }
 ]
 
@@ -100,7 +100,7 @@ export default function Footer() {
                 </div>
 
                 {/* Footer Links */}
-                <div className="flex flex-col gap-y-6 lg:flex-row w-full items-center justify-between">
+                <div className="flex flex-col gap-y-6 lg:flex-row w-full items-center justify-between mb-6">
                     {/* Links & Buttons */}
                     <div className="lg:flex items-center xl:gap-x-10 2xl:gap-x-14 px-6 md:px-0">
                         {/* Links */}
@@ -117,10 +117,10 @@ export default function Footer() {
                     </div>
 
                     {/* Social Links */}
-                    <div className="flex items-center gap-x-5">
+                    <div className="flex items-center gap-x-5 mb-6 lg:mb-0">
                         {
                             socialLinks.map((link, index) => (
-                                <a key={index} href={link.href}>
+                                <a key={index} target="_blank" href={link.href}>
                                     <div className="size-fit p-1.5 bg-blip lg:hover:bg-blip/70 rounded-full">
                                         <link.icon className="md:size-8 text-textSecondary" />
                                     </div>
