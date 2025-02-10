@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Tick02Icon } from "hugeicons-react";
+import Dialog from "./Dialog";
 
 const checkboxOptions = [
     { label: "UI Design", value: "ui-design" },
@@ -9,13 +10,17 @@ const checkboxOptions = [
 ];
 
 export default function Form() {
+    const [isDialogOpen, setDialogOpen] = useState(false);
+    const [title, setTitle] = useState("");
+    const [content, setContent] = useState("");
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         query: "",
         message: ""
     });
-    const [selectedOption, setSelectedOption] = useState(""); 
+    const [selectedOption, setSelectedOption] = useState("");
 
     const handleCheck = (value) => {
         // If the same option is clicked again, uncheck it
@@ -25,14 +30,54 @@ export default function Form() {
         setFormData((prev) => ({ ...prev, query: newValue }));
     };
 
-    const handleFormSubmit = (e) => {
+    const CORS_PROXY = "https://cors-anywhere.herokuapp.com/";
+    const GOOGLE_SHEET_URL = "https://script.google.com/macros/s/AKfycbyNEj8r-skN8nhygWwLC6CH4OYROyzN_aLanaM6iDwxr7J6WDZSKU7NrISnQVNq7BBeCA/exec";
+
+    const handleFormSubmit = async (e) => {
         e.preventDefault();
-        console.log(formData);
+
+        const formDataToSubmit = {
+            name: formData.name,
+            email: formData.email,
+            query: formData.query,
+            message: formData.message
+        };
+
+        try {
+            const response = await fetch(CORS_PROXY + GOOGLE_SHEET_URL, {
+                method: "POST",  
+                headers: { "Content-Type": "application/json" }, 
+                body: new URLSearchParams(formDataToSubmit)
+            });
+
+            if (response.ok) {
+                setDialogOpen(true);
+                setFormData({
+                    name: "",
+                    email: "",
+                    query: "",
+                    message: ""
+                });
+                setSelectedOption("");
+                setTitle("Form submitted !");
+                setContent("Your query has been submitted. Will get back to you shortly.");
+            } else {
+                setDialogOpen(true);
+                setTitle("Error !");
+                setContent("We cannot submit your form, Please try again!");
+            }
+        } catch (error) {
+            console.error("Submission error:", error);
+            setDialogOpen(true);
+            setTitle("Error !");
+            setContent("We cannot submit your form, Please try again!");
+        }
     };
 
     return (
         <form onSubmit={handleFormSubmit}>
             <div className="p-4 md:p-6 w-full rounded-3xl bg-form flex flex-col gap-y-5">
+                <input type="hidden" name="_captcha" value="false" />
                 <div className="w-full flex flex-col gap-y-7">
                     {/* Name Input */}
                     <div className="w-full flex flex-col gap-y-3">
@@ -79,6 +124,7 @@ export default function Form() {
                                     <label className="relative flex items-center cursor-pointer">
                                         <input
                                             type="checkbox"
+                                            name="checkbox"
                                             checked={selectedOption === option.value}
                                             id={option.value}
                                             value={option.value}
@@ -124,6 +170,8 @@ export default function Form() {
                     Submit
                 </button>
             </div>
+
+            <Dialog isOpen={isDialogOpen} title={title} content={content} onClose={() => setDialogOpen(false)} />
         </form>
     );
 }
