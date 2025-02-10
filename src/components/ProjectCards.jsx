@@ -14,13 +14,13 @@ export default function ProjectCards({ title, type, image, brief, hostlink, proj
         <p className="text-subheading font-medium w-3/4">- {brief}</p>
 
         <div className="flex items-center gap-x-2">
-          <a href={hostlink}>
+          <a href={hostlink} target="_blank">
             <div className="rounded-full bg-blip p-1">
               <Globe02Icon className="size-6 text-white" />
             </div>
           </a>
 
-          <a href={projectlink}>
+          <a href={projectlink} target="_blank">
             <div className="rounded-full bg-blip p-1">
               {type === 'design' ? <img src="/figma.svg" className="size-6" /> : <img src="/github.svg" className="size-6" />} 
             </div>
