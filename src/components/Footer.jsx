@@ -8,19 +8,24 @@ import { InstagramIcon, Linkedin01Icon, NewTwitterRectangleIcon } from "hugeicon
 // Footer Links
 const footerLinks = [
     {
-        label: 'Home'
+        label: "Home",
+        target: "top",
     },
     {
-        label: 'Stack'
+        label: "Stack",
+        target: "stack",
     },
     {
-        label: 'Projects'
+        label: "Projects",
+        target: "projects",
     },
     {
-        label: 'Experience'
+        label: "Experience",
+        target: "experience",
     },
     {
-        label: 'Github'
+        label: "Github",
+        target: "https://github.com/pg147",
     },
 ]
 
@@ -49,6 +54,19 @@ export default function Footer() {
         link.click();
         document.body.removeChild(link);
     };
+
+    const handleFooterClick = (target) => {
+        if (target === "top") {
+            window.scrollTo({ top: 0, behavior: "smooth" })
+        } else if (target.startsWith("http")) {
+            window.open(target, "_blank")
+        } else {
+            const element = document.getElementById(target)
+            if (element) {
+                element.scrollIntoView({ behavior: "smooth" })
+            }
+        }
+    }
 
     return (
         <div className="xl:max-w-[1050px] 2xl:max-w-[1400px] mx-auto flex flex-col gap-y-9 md:gap-y-12 h-fit w-full mt-24 mb-8">
@@ -88,7 +106,7 @@ export default function Footer() {
                         {/* Links */}
                         <div className="grid grid-cols-4 md:grid-cols-5 lg:flex items-center md:gap-x-4 xl:gap-x-10 2xl:gap-x-14">
                             {footerLinks.map((link, index) => (
-                                <div key={index} className="md:h-12 w-fit py-2.5">
+                                <div key={index} className="md:h-12 w-fit py-2.5 cursor-pointer" onClick={() => handleFooterClick(link.target)}>
                                     <h1 className="text-base md:text-lg text-links font-regular">{link.label}</h1>
                                 </div>
                             ))}

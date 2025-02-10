@@ -7,19 +7,24 @@ import { useEffect, useState } from 'react';
 // Nav Links
 const navLinks = [
   {
-    label: 'Home'
+    label: "Home",
+    target: "top",
   },
   {
-    label: 'Stack'
+    label: "Stack",
+    target: "stack",
   },
   {
-    label: 'Projects'
+    label: "Projects",
+    target: "projects",
   },
   {
-    label: 'Experience'
+    label: "Experience",
+    target: "experience",
   },
   {
-    label: 'Github'
+    label: "Github",
+    target: "https://github.com/pg147",
   },
 ]
 
@@ -44,6 +49,19 @@ export default function HeroSection() {
     document.body.removeChild(link);
   };
 
+  const handleNavClick = (target) => {
+    if (target === "top") {
+      window.scrollTo({ top: 0, behavior: "smooth" })
+    } else if (target.startsWith("http")) {
+      window.open(target, "_blank")
+    } else {
+      const element = document.getElementById(target)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" })
+      }
+    }
+  }
+
   return (
     <div className='relative h-full w-full overflow-hidden'>
       {/* Mobile Menu */}
@@ -58,7 +76,7 @@ export default function HeroSection() {
         {/* Links */}
         <div className="grid grid-cols-4 md:flex items-center md:gap-x-10 2xl:gap-x-14">
           {navLinks.map((link, index) => (
-            <div key={index} className="md:h-12 w-fit py-2.5">
+            <div key={index} className="md:h-12 w-fit py-2.5 cursor-pointer" onClick={() => handleNavClick(link.target)}>
               <h1 className="text-base md:text-lg text-links font-regular">{link.label}</h1>
             </div>
           ))}
