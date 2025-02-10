@@ -29,6 +29,7 @@ export default function QueryForm() {
                         <h1 className="text-subheading font-regular">Drop your query on the mail below</h1>
                         <p className="text-4xl font-medium bg-clip-text bg-gradient-to-b from-[#C9A2A2] to-primary text-transparent">hi@prathmesh.dev</p>
                     </div>
+                    <h1 className="text-primary font-semibold text-xl">Note: <span className="bg-gradient-to-r from-white to-headingGradientSecondary bg-clip-text text-transparent">The form is currently inactive.</span></h1>
                 </div>
             </div>
 
@@ -43,6 +44,7 @@ export default function QueryForm() {
                     <h1 className="text-subheading font-regular">Drop your query on the mail below</h1>
                     <p className="text-4xl font-medium bg-clip-text bg-gradient-to-b from-[#C9A2A2] to-primary text-transparent">hi@prathmesh.dev</p>
                 </div>
+                <h1 className="lg:hidden text-primary font-semibold">Note: <span className="bg-gradient-to-r from-white to-headingGradientSecondary text-transparent bg-clip-text">The form is currently inactive.</span></h1>
             </div>
         </div>
     )
